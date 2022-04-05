@@ -5,6 +5,11 @@ import DropDown from '../DropDown/DropDown'
 
 const NavBar = () => {
     const isTeacher = true
+    const [visible, setVisible] = React.useState(false)
+    const [user, setUser] = React.useState("teacher@school.org")
+    const changVisible = () =>{
+        setVisible(!visible)
+    }
     return(
         <div className="navbar">
             <div className="logo"><img src={logo} /></div>
@@ -22,9 +27,15 @@ const NavBar = () => {
             )}
 
             <div className="user-bar">
-                <DropDown/>
+                <div className="nav-button" onClick={changVisible}>{user}</div>
+                {
+                    visible?(
+                        <DropDown/>
+                    ):(
+                        <div/>
+                    )
+                }
             </div>
-            
             
         </div>
     )
