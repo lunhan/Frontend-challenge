@@ -1,41 +1,41 @@
 .dropdown{
-    width: 162px;
-    height: 128px;
-    left: 882px;
+    position: fixed;
+    width: 160px;
+    height: 110px;
+    right: 22px;
     top: 44px;
     background: #FFFFFF;
     border: 1px solid #A1A9B5;
     border-radius: 3px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 .dropdown-button{
     height: 34px;
     width: 160px;
-    background: #FFFFFF;
-    border-radius: 3px;
-}
-
-.dropdown-button :hover{
-    background: #EEEEEE;
-}
-
-.dropdown-button a{
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
-    /* identical to box height */
-
     display: flex;
     align-items: center;
-
     color: #242D38;
+}
+
+.dropdown-button:hover{
+    background: #EEEEEE;
+}
+
+.dropdown-button a{
+    margin: 8px 16px;
 }
 
 .divider{
     height: 1px;
     width: 160px;
-
+    margin-top: 4px;
+    margin-bottom: 4px;
     background: #A1A9B5;
 }

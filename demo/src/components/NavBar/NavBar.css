@@ -1,3 +1,4 @@
+/* Whole navbar*/
 .navbar{
     position: sticky;
     position: -webkit-sticky;
@@ -9,6 +10,21 @@
     box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
+/* Text in nav bar */
+.nav-button, .user-button, .nav-classes, .user-button-visible{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+/* When user hover buttons, and classes button default color is white  */
+.nav-button:hover, .user-text:hover, .nav-classes{
+    color: #FFFFFF;
+}
+
+/* Left logo and buttons */
 .logo{
     position: absolute;
     width: 20px;
@@ -30,42 +46,40 @@
     display: inline-flex;
 }
 
-.nav-classes{
-    width: 42px;
-    height: 20px;
-    left: 0px;
-    top: 0px;
-
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 20px;
-    /* identical to box height, or 167% */
-
-    color: #FFFFFF;
-}
-
 .nav-button{
     margin-left: 17px;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 20px;
-    /* identical to box height, or 167% */
-
     color: #A1A9B5;
 }
 
-.nav-button:hover{
-    color: #FFFFFF;
-}
 
+/* Right user menu*/
 .user-bar{
     position: absolute;
     width: 136px;
     height: 20px;
     right: 24px;
     top: 16px;
+}
+
+.user-button{
+    text-align: left;
+    height: 20px;
+    display: flex;
+}
+
+.button-icon{
+    margin-top: 2px;
+    margin-left: 9px;
+}
+
+.button-icon:hover{
+    /* filter: drop-shadow(0 0 0 #FFFFFF); */
+}
+
+.user-text{
+    color: #A1A9B5;
+}
+
+.user-text-visible{
+    color: #FFFFFF;
 }

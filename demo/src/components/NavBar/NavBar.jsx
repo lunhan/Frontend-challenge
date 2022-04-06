@@ -2,6 +2,8 @@ import React from "react";
 import './NavBar.css';
 import logo from '../../static/img/logo.svg'
 import DropDown from '../DropDown/DropDown'
+import up from '../../static/img/icon-arrow-up.svg'
+import down from '../../static/img/icon-arrow.svg'
 
 const NavBar = () => {
     const isTeacher = true
@@ -27,7 +29,14 @@ const NavBar = () => {
             )}
 
             <div className="user-bar">
-                <div className="nav-button" onClick={changVisible}>{user}</div>
+                <div className="user-button"  onClick={changVisible}>
+                    <div className={visible? "user-text-visible":"user-text" }>{user}</div>
+                    <div className="button-icon">
+                        {
+                            visible?(<img src={up}/>):(<img src={down}/>)
+                        }
+                    </div>
+                </div>
                 {
                     visible?(
                         <DropDown/>
