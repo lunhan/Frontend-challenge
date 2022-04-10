@@ -6,12 +6,14 @@ import up from '../../static/img/icon-arrow-up.svg'
 import down from '../../static/img/icon-arrow.svg'
 
 const NavBar = () => {
-    const isTeacher = true
+    const [isTeacher, setIsTeacher] = React.useState(true)
     const [visible, setVisible] = React.useState(false)
-    const [user, setUser] = React.useState("teacher@school.org")
+    const teacher = "teacher@school.org"
+    const student = "student@school.org"
     const changVisible = () =>{
         setVisible(!visible)
     }
+
     return(
         <div className="navbar">
             <div className="logo"><img src={logo} /></div>
@@ -30,7 +32,7 @@ const NavBar = () => {
 
             <div className="user-bar">
                 <div className="user-button"  onClick={changVisible}>
-                    <div className={visible? "user-text-visible":"user-text" }>{user}</div>
+                    <div className={visible? "user-text-visible":"user-text" }>{isTeacher? teacher:student}</div>
                     <div className="button-icon">
                         {
                             visible?(<img src={up}/>):(<img src={down}/>)
@@ -39,7 +41,7 @@ const NavBar = () => {
                 </div>
                 {
                     visible?(
-                        <DropDown/>
+                        <DropDown />
                     ):(
                         <div/>
                     )
